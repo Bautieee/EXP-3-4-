@@ -1,0 +1,41 @@
+// adidmabest 
+#include <iostream>
+using namespace std;
+
+const int PROVINCE = 3;
+const int WEEK = 7;
+
+
+int main()
+{
+    int temperature[PROVINCE][WEEK];
+
+    cout << "Enter all temperature for a week of first province, second province and third province. \n";
+
+
+    // LETTERS PO DAPAT EH PERO SA JAVA LANG UNG ALAM KONG INCREMENT HINDI SYAAA APPLICABLE :(((
+    
+    for (int i = 0; i < PROVINCE; ++i)
+    {
+        for(int j = 0; j < WEEK; ++j)
+        {
+            cout << "Province " << i + 1 << ", Day " << j + 1 << " : ";
+            cin >> temperature[i][j];
+        }
+    }
+       // ma'am hindi na ko na kaya sorry :(((((((
+
+    cout << "\n\nDisplaying Values:\n";
+
+    // sad
+    
+    for (int i = 0; i < PROVINCE; ++i)
+    {
+        for(int j = 0; j < WEEK; ++j)
+        {
+            cout << "Province " << i + 1 << ", Day " << j + 1 << " = " << temperature[i][j] << endl;
+        }
+    }
+   
+    return 0;
+}
