@@ -1,0 +1,61 @@
+#include <iostream>
+
+using namespace std;
+
+void function();
+
+int main()
+ {
+ 	// totoo to vvvv
+ 	cout << "ANG POGI NI GAB !!" << endl;
+ 	// ^^^
+    cout << "Please Enter 10 numbers: " << endl;
+
+    function();
+
+    return 0;
+}
+
+//func for average na magagamit later
+double average(int a[], int array) 
+{
+	  int sum = 0; 
+   	  for (int i=0; i<array; i++) 
+       sum += a[i]; 
+  
+    return sum/array; 
+}
+// ez func
+void function () {
+    int z, i;
+    int temp = 0;
+    int array[10] = {0,0,0,0,0,0,0,0,0,0};
+
+    for (z = 0; z < 10; z++) 
+	{
+    cin >> array[z];
+    }
+
+	// for bigger number use > sign
+    for (i = 0; i < 10; i++)
+	 {
+        if (array[i] > temp)
+            temp = array[i];
+    }
+		
+  //spaces please para mag mukang malinis #Tamang\n 
+  
+    cout << "\nAverage: "<<average(array, i) << endl; 
+    cout << "\nYour largest number is: " << temp << endl;;
+    
+    // if you are finding the smallest number, just choose < sign 
+    for (i = 0; i < 10; i++)
+	 {
+        if (array[i] < temp)
+            temp = array[i];
+    }
+    
+    cout << "\nYour smallest number is: " << temp;   
+    
+    
+}
